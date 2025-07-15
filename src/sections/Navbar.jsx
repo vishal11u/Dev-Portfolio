@@ -38,14 +38,33 @@ const Navbar = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden sm:block">
+        <nav className="hidden sm:flex items-center gap-6">
           <Navigation />
+
+          {/* Action Buttons */}
+          <div className="flex gap-4">
+            <a
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=shitolevishal29@gmail.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-1.5 rounded-md text-sm font-semibold text-white bg-indigo-500 hover:bg-[#00ADB5]/90 transition"
+            >
+              Hire Me
+            </a>
+            <a
+              href="/Vishal-Shitole-Resume-.pdf"
+              download
+              className="px-4 py-1.5 rounded-md text-sm font-semibold text-white border border-white hover:bg-white hover:text-black transition"
+            >
+              Download Resume
+            </a>
+          </div>
         </nav>
 
         {/* Hamburger Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="sm:hidden focus:outline-none transition-transform duration-300"
+          className="sm:hidden focus:outline-none transition-transform duration-300 mr-4"
         >
           <motion.div
             initial={false}
@@ -85,13 +104,26 @@ const Navbar = () => {
       <AnimatePresence>
         {isOpen && (
           <motion.nav
-            className="sm:hidden bg-[#111]/0 px-4 py-6 text-center"
+            className="sm:hidden bg-[#111]/0 px-4 py-6 text-center space-y-4"
             initial={{ opacity: 0, y: -20 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4 }}
           >
             <Navigation />
+            <a
+              href="mailto:shitolevishal29@gmail.com"
+              className="inline-block w-full py-2 rounded-md text-sm font-semibold text-white bg-[#00ADB5] hover:bg-[#00ADB5]/90 transition"
+            >
+              Hire Me
+            </a>
+            <a
+              href="/Vishal-Shitole-Resume-.pdf"
+              download
+              className="inline-block w-full py-2 rounded-md text-sm font-semibold text-white border border-white hover:bg-white hover:text-black transition"
+            >
+              Download Resume
+            </a>
           </motion.nav>
         )}
       </AnimatePresence>
