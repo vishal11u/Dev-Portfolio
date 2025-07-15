@@ -1,7 +1,7 @@
 import { useState } from "react";
-import emailjs from "@emailjs/browser";
 import Alert from "../components/Alert";
 import { Particles } from "../components/Particles";
+
 const Contact = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -31,25 +31,31 @@ const Contact = () => {
     setIsLoading(true);
 
     try {
-      await emailjs.send(
-        "service_5kdd5zf",
-        "template_m9hd7sw",
-        {
-          from_name: formData.name,
-          to_name: "Vishal",
-          from_email: formData.email,
-          to_email: "shitolevishal28@gmail.com",
-          message: formData.message,
+      const response = await fetch("https://formspree.io/f/xjkovvdy", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
         },
-        "DgWm7jczbEwKVp_c_"
-      );
-      setIsLoading(false);
-      setFormData({ name: "", email: "", message: "" });
-      showAlertMessage("success", "You message has been sent!");
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          message: formData.message,
+        }),
+      });
+
+      const result = await response.json();
+
+      if (response.ok) {
+        setFormData({ name: "", email: "", message: "" });
+        showAlertMessage("success", "Your message has been sent!");
+      } else {
+        throw new Error(result?.error || "Something went wrong!");
+      }
     } catch (error) {
+      console.error(error);
+      showAlertMessage("danger", "Something went wrong!");
+    } finally {
       setIsLoading(false);
-      console.log(error);
-      showAlertMessage("danger", "Somthing went wrong!");
     }
   };
 
@@ -57,8 +63,8 @@ const Contact = () => {
     <section className="relative flex items-center c-space section-spacing">
       <Particles
         className="absolute inset-0 -z-50"
-        quantity={100}
-        ease={80}
+        quantity={300}
+        ease={40}
         color={"#ffffff"}
         refresh
       />
@@ -67,8 +73,8 @@ const Contact = () => {
         <div className="flex flex-col items-start w-full gap-5 mb-10">
           <h2 className="text-heading">Let's Talk</h2>
           <p className="font-normal text-neutral-400">
-            Whether you're loking to build a new website, improve your existing
-            platform, or bring a unique project to life, I'm here to help
+            Whether you're looking to build a new website, improve your existing
+            platform, or bring a unique project to life, I'm here to help.
           </p>
         </div>
         <form className="w-full" onSubmit={handleSubmit}>
@@ -97,7 +103,7 @@ const Contact = () => {
               name="email"
               type="email"
               className="field-input field-input-focus"
-              placeholder="JohnDoe@email.com"
+              placeholder="johndoe@email.com"
               autoComplete="email"
               value={formData.email}
               onChange={handleChange}
@@ -111,11 +117,10 @@ const Contact = () => {
             <textarea
               id="message"
               name="message"
-              type="text"
               rows="4"
               className="field-input field-input-focus"
               placeholder="Share your thoughts..."
-              autoComplete="message"
+              autoComplete="off"
               value={formData.message}
               onChange={handleChange}
               required

@@ -16,6 +16,7 @@ const About = () => {
             src="assets/coding-pov.png"
             className="absolute scale-[1.75] -right-[5rem] -top-[1rem] md:scale-[3] md:left-50 md:inset-y-10 lg:scale-[2.5]"
           />
+
           <div className="z-10">
             <p className="headtext">Hi, I'm Vishal Shitole</p>
             <p className="subtext">
@@ -25,6 +26,7 @@ const About = () => {
           </div>
           <div className="absolute inset-x-0 pointer-evets-none -bottom-4 h-1/2 sm:h-1/3 bg-gradient-to-t from-indigo" />
         </div>
+
         {/* Grid 2 */}
         <div className="grid-default-color grid-2">
           <div
@@ -35,7 +37,6 @@ const About = () => {
               CODE IS CRAFT
             </p>
 
-            
             <Card
               style={{ rotate: "90deg", bottom: "30%", left: "70%" }}
               text="Design Patterns"
@@ -50,33 +51,32 @@ const About = () => {
             {/* Frontend Logos */}
             <Card
               style={{ rotate: "30deg", top: "70%", left: "70%" }}
-              image="assets/logos/react-pink.png"
+              image="assets/logos/android-icon.png"
               containerRef={grid2Container}
             />
             <Card
               style={{ rotate: "-45deg", top: "70%", left: "25%" }}
-              image="assets/logos/github-pink.png"
+              image="assets/logos/firebase.png"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/typescript-pink.png"
+              style={{ rotate: "-50deg", top: "5%", left: "15%" }}
+              image="assets/logos/css-logo.png"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/JavaScript-pink.png"
+              style={{ rotate: "-55deg", top: "5%", left: "35%" }}
+              image="assets/logos/ios.png"
               containerRef={grid2Container}
             />
             <Card
-              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/nextjs.png"
+              style={{ rotate: "-60deg", top: "5%", left: "55%" }}
+              image="assets/logos/junkin.png"
               containerRef={grid2Container}
             />
-
             <Card
-              style={{ rotate: "-45deg", top: "5%", left: "10%" }}
-              image="assets/logos/html-logo.webp"
+              style={{ rotate: "-65deg", top: "5%", left: "90%" }}
+              image="assets/logos/visualstudiocode.svg"
               containerRef={grid2Container}
             />
 
@@ -112,6 +112,7 @@ const About = () => {
             <Globe />
           </figure>
         </div>
+
         {/* Grid 4 */}
         <div className="grid-special-color grid-4">
           <div className="flex flex-col items-center justify-center gap-4 size-full">
@@ -121,6 +122,7 @@ const About = () => {
             <CopyEmailButton />
           </div>
         </div>
+
         {/* Grid 5 */}
         <div className="grid-default-color grid-5">
           <div className="z-10 w-[50%]">

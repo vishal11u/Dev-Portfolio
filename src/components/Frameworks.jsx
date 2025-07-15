@@ -2,18 +2,19 @@ import { OrbitingCircles } from "./OrbitingCircles";
 
 export function Frameworks() {
   const skills = [
-    { name: "auth0", file: "auth0.svg" },
-    { name: "blazor", file: "blazor.svg" },
-    { name: "cplusplus", file: "cplusplus.webp" },
-    { name: "csharp", file: "csharp.svg" },
-    { name: "css3", file: "css3.png" },
-    { name: "dotnet", file: "dotnet.svg" },
-    { name: "git", file: "git.svg" },
-    { name: "html5", file: "html5.png" },
-    { name: "react", file: "react.svg" },
+    { name: "html5", file: "html5.svg" },
     { name: "tailwindcss", file: "tailwindcss.svg" },
+    { name: "JavaScript-pink", file: "JavaScript-pink.png" },
+    { name: "react", file: "react.svg" },
+    { name: "typescript-pink", file: "typescript-pink.png" },
     { name: "vitejs", file: "vitejs.svg" },
-    { name: "wordpress", file: "wordpress.png" },
+    { name: "nextjs", file: "nextjs.png" },
+    { name: "redux", file: "redux.png" },
+    { name: "jest", file: "jest.png" },
+
+    { name: "vercel", file: "vercel.png" },
+    { name: "node", file: "node.png" },
+    { name: "supabase-logo", file: "supabase-logo.png" },
   ];
 
   return (
@@ -23,9 +24,9 @@ export function Frameworks() {
           <Icon key={index} src={`assets/logos/${skill.file}`} />
         ))}
       </OrbitingCircles>
-      <OrbitingCircles iconSize={25} radius={100} reverse speed={2}>
+      <OrbitingCircles iconSize={25} radius={100} reverse speed={1}>
         {skills
-          .slice() // avoid mutating original
+          .slice()
           .reverse()
           .map((skill, index) => (
             <Icon key={index} src={`assets/logos/${skill.file}`} />

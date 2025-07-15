@@ -29,7 +29,11 @@ const Navbar = () => {
   return (
     <header className="fixed inset-x-0 top-0 z-50 backdrop-blur-md bg-[#0d0d0d]/60 shadow-md">
       <div className="mx-auto max-w-7xl px-4 py-3 sm:py-4 flex items-center justify-between">
-        <a href="/" className="text-2xl font-bold text-white tracking-wide">
+        <a
+          href="/"
+          className="flex items-center gap-1.5 text-2xl font-bold text-white tracking-wide"
+        >
+          <img src="/logo.png" alt="Logo" className="h-8 w-8 object-contain" />
           Vishal
         </a>
 
