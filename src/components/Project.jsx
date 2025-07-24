@@ -34,6 +34,7 @@ const Project = ({
           <img src="assets/arrow-right.svg" className="w-5" />
         </button>
       </div>
+
       <div className="bg-gradient-to-r from-transparent via-neutral-700 to-transparent h-[1px] w-full" />
       {isHidden && (
         <ProjectDetails
