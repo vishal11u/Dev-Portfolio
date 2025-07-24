@@ -6,20 +6,30 @@ import { FaGithub } from "react-icons/fa";
 import { CgMenuRightAlt } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
 
-function Navigation() {
+function Navigation({ closeMenu }) {
+  const navItems = ["home", "about", "work", "contact"];
+
+  const handleClick = (id) => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+      closeMenu?.();
+    }
+  };
+
   return (
     <ul className="flex flex-col gap-6 sm:flex-row sm:gap-8 text-lg font-medium">
-      {["home", "about", "work", "contact"].map((item) => (
+      {navItems.map((item) => (
         <li key={item}>
-          <a
-            className="relative text-neutral-300 transition duration-300 ease-in-out hover:text-white
+          <button
+            onClick={() => handleClick(item)}
+            className="relative text-neutral-300 transition duration-300 ease-in-out cursor-pointer hover:text-white
                        after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px]
                        after:w-0 after:bg-white after:transition-all after:duration-300
                        hover:after:w-full"
-            href={`#${item}`}
           >
             {item.charAt(0).toUpperCase() + item.slice(1)}
-          </a>
+          </button>
         </li>
       ))}
     </ul>
