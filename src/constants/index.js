@@ -115,7 +115,7 @@ export const myProjects = [
       },
       {
         id: 7,
-        name: "AI Chatbot",
+        name: "AI",
         path: "/assets/logos/openai.svg",
       },
       {

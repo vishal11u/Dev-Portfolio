@@ -2,6 +2,9 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { FaGithub } from "react-icons/fa";
+import { CgMenuRightAlt } from "react-icons/cg";
+import { IoMdClose } from "react-icons/io";
 
 function Navigation() {
   return (
@@ -58,46 +61,53 @@ const Navbar = () => {
             >
               Download Resume
             </a>
+            <a
+              href="https://github.com/vishal11u"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-4 py-1.5 rounded-md text-sm font-semibold bg-white text-black border  hover:border-white hover:bg-transparent hover:text-white transition flex items-center gap-2"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="currentColor"
+                viewBox="0 0 24 24"
+                className="w-5 h-5"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M12 0C5.37 0 0 5.373 0 12a12.01 12.01 0 008.205 11.385c.6.111.82-.258.82-.577v-2.256c-3.338.726-4.042-1.61-4.042-1.61-.546-1.387-1.333-1.756-1.333-1.756-1.09-.745.083-.729.083-.729 1.205.086 1.839 1.248 1.839 1.248 1.07 1.834 2.807 1.304 3.492.996.109-.775.419-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.932 0-1.31.469-2.382 1.236-3.222-.124-.304-.536-1.527.117-3.182 0 0 1.008-.323 3.3 1.23a11.5 11.5 0 016.002 0c2.292-1.553 3.298-1.23 3.298-1.23.655 1.655.243 2.878.12 3.182.77.84 1.235 1.912 1.235 3.222 0 4.61-2.807 5.625-5.479 5.922.43.37.814 1.096.814 2.21v3.285c0 .322.218.694.825.576A12.01 12.01 0 0024 12c0-6.627-5.373-12-12-12z"
+                  clipRule="evenodd"
+                />
+              </svg>
+              <span>GitHub</span>
+            </a>
           </div>
         </nav>
 
         {/* Hamburger Button */}
-        <button
-          onClick={() => setIsOpen(!isOpen)}
-          className="sm:hidden focus:outline-none transition-transform duration-300 mr-4"
-        >
-          <motion.div
-            initial={false}
-            animate={isOpen ? "open" : "closed"}
-            className="w-6 h-6 relative"
+        <div className="flex items-center gap-4 mr-0 sm:hidden">
+          <a
+            href="https://github.com/vishal11u"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="p-1 rounded-full -mt-0 text-sm font-semibold bg-white text-black border  hover:border-white hover:bg-transparent hover:text-white transition "
           >
-            <motion.span
-              className="absolute h-[2px] w-full bg-white"
-              variants={{
-                open: { rotate: 45, y: 6 },
-                closed: { rotate: 0, y: 0 },
-              }}
-              transition={{ duration: 0.3 }}
-            />
-            <motion.span
-              className="absolute h-[2px] w-full bg-white"
-              variants={{
-                open: { opacity: 0 },
-                closed: { opacity: 1 },
-              }}
-              transition={{ duration: 0.3 }}
-              style={{ top: 6 }}
-            />
-            <motion.span
-              className="absolute h-[2px] w-full bg-white"
-              variants={{
-                open: { rotate: -45, y: -6 },
-                closed: { rotate: 0, y: 12 },
-              }}
-              transition={{ duration: 0.3 }}
-            />
-          </motion.div>
-        </button>
+            <FaGithub size={20} />
+          </a>
+
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className=" focus:outline-none transition-transform duration-300"
+          >
+            <motion.div
+              initial={false}
+              // animate={isOpen ? "open" : "closed"}
+              className="relative"
+            >
+              {isOpen ? <IoMdClose size={31} /> : <CgMenuRightAlt size={31} />}
+            </motion.div>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Navigation */}
