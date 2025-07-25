@@ -22,7 +22,10 @@ function Navigation({ closeMenu }) {
       {navItems.map((item) => (
         <li key={item}>
           <button
-            onClick={() => handleClick(item)}
+            onClick={() => {
+              handleClick(item);
+              closeMenu();
+            }}
             className="relative text-neutral-300 transition duration-300 ease-in-out cursor-pointer hover:text-white
                        after:content-[''] after:absolute after:left-0 after:-bottom-1 after:h-[2px]
                        after:w-0 after:bg-white after:transition-all after:duration-300
@@ -130,7 +133,7 @@ const Navbar = () => {
             exit={{ opacity: 0, y: -10 }}
             transition={{ duration: 0.4 }}
           >
-            <Navigation />
+            <Navigation closeMenu={() => setIsOpen(false)} />
             <a
               href="mailto:shitolevishal29@gmail.com"
               className="inline-block w-full py-2 rounded-md text-sm font-semibold text-white bg-[#00ADB5] hover:bg-[#00ADB5]/90 transition"
