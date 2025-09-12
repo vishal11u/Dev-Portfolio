@@ -1,5 +1,75 @@
 export const myProjects = [
   {
+    id: 7,
+    title: "FormPilot – Full-Stack Form Submission SaaS",
+    description:
+      "FormPilot is a flexible, developer-centric SaaS for building, embedding, and managing forms via API or simple HTML/React integrations.",
+    subDescription: [
+      "Built with Next.js, Node.js, and TypeScript for performance, scalability, and developer experience.",
+      "PostgreSQL used as the primary database for storing forms and submissions.",
+      "We handle server-side validation, spam protection (ML-powered), email notifications, and lead capture.",
+      "Dashboard available for viewing submissions, analytics, and exporting data (CSV/JSON).",
+      "Provides a widget snippet/popup overlay for capturing visitor leads.",
+      "Supports third-party integrations without relying on Zapier and is compliant with GDPR, CCPA, SOC 2 Type II.",
+      "Deployed on Vercel with automated CI/CD workflows for fast and reliable updates.",
+    ],
+    href: "https://form-pilot-v.vercel.app/",
+    logo: "",
+    image: "/assets/projects/project-6.png",
+    tags: [
+      {
+        id: 1,
+        name: "Next.js",
+        path: "/assets/logos/nextjs.svg",
+      },
+      {
+        id: 2,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 3,
+        name: "Node.js",
+        path: "/assets/logos/nodejs.svg",
+      },
+      {
+        id: 4,
+        name: "PostgreSQL",
+        path: "/assets/logos/postgresql.svg",
+      },
+      {
+        id: 5,
+        name: "TailwindCSS",
+        path: "/assets/logos/tailwindcss.svg",
+      },
+      {
+        id: 6,
+        name: "Widget",
+        path: "/assets/logos/widget.svg",
+      },
+      {
+        id: 7,
+        name: "API",
+        path: "/assets/logos/api.svg",
+      },
+      {
+        id: 8,
+        name: "CI/CD",
+        path: "/assets/logos/cicd.svg",
+      },
+      {
+        id: 9,
+        name: "Vercel",
+        path: "/assets/logos/vercel.svg",
+      },
+      {
+        id: 10,
+        name: "GDPR / CCPA / SOC2",
+        path: "/assets/logos/compliance.svg",
+      },
+    ],
+  },
+  {
     id: 1,
     title: "SupportGenie – AI Customer Support",
     description:

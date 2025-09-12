@@ -7,7 +7,7 @@ import { CgMenuRightAlt } from "react-icons/cg";
 import { IoMdClose } from "react-icons/io";
 
 function Navigation({ closeMenu }) {
-  const navItems = ["home", "about", "work", "contact"];
+  const navItems = ["home", "about", "work", "contact", "projects"];
 
   const handleClick = (id) => {
     const el = document.getElementById(id);

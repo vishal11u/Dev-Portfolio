@@ -7,14 +7,14 @@ export function Frameworks() {
     { name: "JavaScript-pink", file: "JavaScript-pink.png" },
     { name: "react", file: "react.svg" },
     { name: "typescript-pink", file: "typescript-pink.png" },
-    { name: "vitejs", file: "vitejs.svg" },
+    { name: "mongodb", file: "mongo-db.png" },
     { name: "nextjs", file: "nextjs.png" },
     { name: "redux", file: "redux.png" },
     { name: "jest", file: "jest.png" },
 
-    { name: "vercel", file: "vercel.png" },
+    { name: "github", file: "github_logo.png" },
     { name: "node", file: "node.png" },
-    { name: "supabase-logo", file: "supabase-logo.png" },
+    { name: "postgre-sql", file: "postgre-sql.png" },
   ];
 
   return (
