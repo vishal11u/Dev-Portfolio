@@ -70,6 +70,55 @@ export const myProjects = [
     ],
   },
   {
+    id: 8,
+    title: "Frontix – Open Source npm Package",
+    description:
+      "A modern, lightweight utility toolkit for frontend developers, offering 25+ utilities for string, date, validation, async, and deep object operations. Built with TypeScript (ESM + CJS), tree-shakable, and optimized for bundle size and performance. Published as an npm package (MIT licensed).",
+    subDescription: [
+      "Published on npm with 100% test coverage (Vitest) and automated CI/CD via GitHub Actions.",
+      "Built with TypeScript and bundled using tsup, ensuring lightweight builds (~2.5KB gzipped).",
+      "Supports both ESM and CJS builds for compatibility across modern and legacy projects.",
+      "Includes utilities like debounce, throttle, deepClone, slugify, validateEmail, formatDate, and retry.",
+      "Maintained with semantic versioning, Prettier, and ESLint for code quality.",
+    ],
+    href: "https://www.npmjs.com/package/frontix",
+    logo: "/assets/logos/npm.svg",
+    image: "/assets/projects/project-7.png",
+    tags: [
+      {
+        id: 1,
+        name: "TypeScript",
+        path: "/assets/logos/typescript.svg",
+      },
+      {
+        id: 2,
+        name: "Node.js",
+        path: "/assets/logos/nodejs.svg",
+      },
+      {
+        id: 3,
+        name: "Vitest",
+        path: "/assets/logos/vitest.svg",
+      },
+      {
+        id: 4,
+        name: "CI/CD",
+        path: "/assets/logos/github-actions.svg",
+      },
+      {
+        id: 5,
+        name: "tsup",
+        path: "/assets/logos/tsup.svg",
+      },
+      {
+        id: 6,
+        name: "npm",
+        path: "/assets/logos/npm.svg",
+      },
+    ],
+  },
+
+  {
     id: 1,
     title: "SupportGenie – AI Customer Support",
     description:
